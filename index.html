@@ -49,7 +49,23 @@ img{
   margin-top: 100px;
 }
   </style>
-  <script defer>
+
+</head>
+<body>
+  <div class="container">
+    <form class="form">
+      <input type="text" required placeholder="URL Картинки" id="url">
+      <input type="text" required placeholder="Заголовок статьи" id="title">
+      <input type="text" required placeholder="Текст статьи" id="text">
+      <input type="text" required placeholder="Дата" id="date">
+      <input type="text" required placeholder="Ссылка на оригинальную статью" id="link">
+      <input type="text" placeholder="Имя Фамилия автора" id="name">
+      <button>Опубликовать</button>
+    </form>
+  
+    <ul class="list"></ul>
+  </div>
+    <script defer>
     const url = document.getElementById('url')
     const title = document.getElementById('title')
     const text = document.getElementById('text')
@@ -81,20 +97,5 @@ img{
       list.append(block)
     })
   </script>
-</head>
-<body>
-  <div class="container">
-    <form class="form">
-      <input type="text" required placeholder="URL Картинки" id="url">
-      <input type="text" required placeholder="Заголовок статьи" id="title">
-      <input type="text" required placeholder="Текст статьи" id="text">
-      <input type="text" required placeholder="Дата" id="date">
-      <input type="text" required placeholder="Ссылка на оригинальную статью" id="link">
-      <input type="text" placeholder="Имя Фамилия автора" id="name">
-      <button>Опубликовать</button>
-    </form>
-  
-    <ul class="list"></ul>
-  </div>
 </body>
 </html>
