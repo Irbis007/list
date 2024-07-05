@@ -46,8 +46,16 @@ if(form){
       nameT: nameT.value,
       link: link.value
     })
+
+    title.value = '';
+    date.value = '';
+    text.value = '';
+    nameT.value = '';
+    link.value  = '';
+    url.files[0] = null
   
     localStorage.setItem('list', JSON.stringify(arr))
+    alert('статья добавлена');
     console.log(39)
   })
 }
