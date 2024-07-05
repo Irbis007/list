@@ -17,12 +17,19 @@ let src = ''
 if(url){
   url.addEventListener('change', function(event) {
     const file = event.target.files[0];
+    const maxSize = 2 * 1024 * 1024;
     if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            src = e.target.result;
-        }
-        reader.readAsDataURL(file);
+      if (file.size > maxSize) {
+          alert('Файл слишком большой. Максимальный размер файла: 2 MB');
+          event.target.value = ''; 
+          return;
+      }
+      console.log(file.size)
+      const reader = new FileReader();
+      reader.onload = function(e) {
+          src = e.target.result;
+      }
+      reader.readAsDataURL(file);
     }
   });
   
