@@ -57,9 +57,14 @@ img{
 >>>>>>> 4a87888 (first commit)
 </head>
 <body>
+  <header>
+    <div class="container">
+      <a href="./news">News</a>
+    </div>
+  </header>
   <div class="container">
     <form class="form">
-      <input type="text" required placeholder="URL Картинки" id="url">
+      <input type="file" required placeholder="URL Картинки" id="url" accept=".jpg, .jpeg, .png" >
       <input type="text" required placeholder="Заголовок статьи" id="title">
       <input type="text" required placeholder="Текст статьи" id="text">
       <input type="text" required placeholder="Дата" id="date">
@@ -68,7 +73,7 @@ img{
       <button>Опубликовать</button>
     </form>
   
-    <ul class="list"></ul>
+
   </div>
 <<<<<<< HEAD
     <script defer>
